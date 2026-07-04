@@ -1,0 +1,509 @@
+/* ================================================================
+   WORLD OF DRAGONS - ANIMATIONS STYLESHEET
+   Keyframe animations and transition effects
+   ================================================================ */
+
+/* ================================================================
+   FADE ANIMATIONS
+   ================================================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* ================================================================
+   SCALE ANIMATIONS
+   ================================================================ */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* ================================================================
+   ROTATION ANIMATIONS
+   ================================================================ */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinSlow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-5deg);
+    }
+    to {
+        transform: rotate(5deg);
+    }
+}
+
+/* ================================================================
+   GLOW ANIMATIONS
+   ================================================================ */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px var(--color-gold),
+                    0 0 10px var(--color-gold);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--color-gold),
+                    0 0 30px var(--color-gold);
+    }
+}
+
+@keyframes glowText {
+    0%, 100% {
+        text-shadow: 0 0 5px var(--color-gold),
+                     0 0 10px rgba(212, 175, 55, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px var(--color-gold),
+                     0 0 30px rgba(212, 175, 55, 0.3),
+                     0 0 40px rgba(139, 0, 0, 0.2);
+    }
+}
+
+@keyframes glowRed {
+    0%, 100% {
+        box-shadow: 0 0 5px var(--color-red-wine),
+                    0 0 10px var(--color-red-wine);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--color-red-wine),
+                    0 0 30px var(--color-red-wine);
+    }
+}
+
+/* ================================================================
+   SHIMMER ANIMATIONS
+   ================================================================ */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes shimmerGold {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* ================================================================
+   WAVE ANIMATIONS
+   ================================================================ */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes waveText {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ================================================================
+   BOUNCE ANIMATIONS
+   ================================================================ */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ================================================================
+   SLIDE ANIMATIONS
+   ================================================================ */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ================================================================
+   FLIP ANIMATIONS
+   ================================================================ */
+@keyframes flip {
+    0% {
+        transform: perspective(400px) rotateY(0);
+    }
+    100% {
+        transform: perspective(400px) rotateY(360deg);
+    }
+}
+
+@keyframes flipX {
+    0% {
+        transform: perspective(400px) rotateX(0);
+    }
+    100% {
+        transform: perspective(400px) rotateX(360deg);
+    }
+}
+
+/* ================================================================
+   SKEW ANIMATIONS
+   ================================================================ */
+@keyframes skew {
+    0%, 100% {
+        transform: skewX(0deg);
+    }
+    50% {
+        transform: skewX(-5deg);
+    }
+}
+
+/* ================================================================
+   GRADIENT ANIMATIONS
+   ================================================================ */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ================================================================
+   TYPEWRITER ANIMATION
+   ================================================================ */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    0%, 49% {
+        border-right-color: var(--color-gold);
+    }
+    50%, 100% {
+        border-right-color: transparent;
+    }
+}
+
+/* ================================================================
+   DRAGON-SPECIFIC ANIMATIONS
+   ================================================================ */
+@keyframes dragonFly {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-20px) translateX(20px);
+    }
+    50% {
+        transform: translateY(-40px) translateX(0);
+    }
+    75% {
+        transform: translateY(-20px) translateX(-20px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes dragonBreath {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes wingFlap {
+    0%, 100% {
+        transform: rotateZ(-5deg);
+    }
+    50% {
+        transform: rotateZ(5deg);
+    }
+}
+
+/* ================================================================
+   UTILITY ANIMATION CLASSES
+   ================================================================ */
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fadeInDown {
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.animate-fadeInLeft {
+    animation: fadeInLeft 0.6s ease-out;
+}
+
+.animate-fadeInRight {
+    animation: fadeInRight 0.6s ease-out;
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.5s ease-out;
+}
+
+.animate-bounce {
+    animation: bounce 1s ease-in-out infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-spin {
+    animation: spin 2s linear infinite;
+}
+
+.animate-spinSlow {
+    animation: spinSlow 4s linear infinite;
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+.animate-glowText {
+    animation: glowText 3s ease-in-out infinite;
+}
+
+.animate-wave {
+    animation: wave 1s ease-in-out infinite;
+}
+
+.animate-dragonFly {
+    animation: dragonFly 4s ease-in-out infinite;
+}
+
+.animate-wingFlap {
+    animation: wingFlap 0.6s ease-in-out infinite;
+}
+
+/* ================================================================
+   STAGGERED ANIMATIONS
+   ================================================================ */
+.stagger-item {
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* ================================================================
+   RESPONSIVE ANIMATIONS
+   ================================================================ */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    @keyframes dragonFly {
+        0% {
+            transform: translateY(0) translateX(0);
+        }
+        25% {
+            transform: translateY(-10px) translateX(10px);
+        }
+        50% {
+            transform: translateY(-20px) translateX(0);
+        }
+        75% {
+            transform: translateY(-10px) translateX(-10px);
+        }
+        100% {
+            transform: translateY(0) translateX(0);
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .animate-spin {
+        animation: spin 3s linear infinite;
+    }
+    
+    .animate-spinSlow {
+        animation: spinSlow 5s linear infinite;
+    }
+}
