@@ -1,0 +1,463 @@
+/* ================================================================
+   WORLD OF DRAGONS - PRINT STYLESHEET
+   Styles optimized for printing
+   ================================================================ */
+
+@media print {
+    /* ================================================================
+       GENERAL PRINT STYLES
+       ================================================================ */
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: white;
+        color: black;
+        font-family: 'Georgia', serif;
+        line-height: 1.6;
+    }
+
+    /* ================================================================
+       PAGE SETUP
+       ================================================================ */
+    @page {
+        size: A4;
+        margin: 2cm;
+    }
+
+    @page :first {
+        margin-top: 3cm;
+    }
+
+    @page :left {
+        margin-left: 2.5cm;
+        margin-right: 1.5cm;
+    }
+
+    @page :right {
+        margin-left: 1.5cm;
+        margin-right: 2.5cm;
+    }
+
+    /* ================================================================
+       VISIBILITY FOR PRINT
+       ================================================================ */
+    .no-print,
+    .print-hidden,
+    nav,
+    footer,
+    .sidebar,
+    .advertisement,
+    .social-share,
+    .comments,
+    .related-posts,
+    button,
+    input,
+    textarea,
+    select,
+    form {
+        display: none !important;
+    }
+
+    .print-only {
+        display: block !important;
+    }
+
+    /* ================================================================
+       LINKS
+       ================================================================ */
+    a,
+    a:visited {
+        text-decoration: underline;
+        color: black;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* Skip printing URLs for certain elements */
+    .no-print-url a[href]:after {
+        content: "";
+    }
+
+    nav a[href]:after,
+    .sidebar a[href]:after,
+    .footer a[href]:after {
+        content: "";
+    }
+
+    /* ================================================================
+       IMAGES
+       ================================================================ */
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+
+    img[alt]:after {
+        content: " (" attr(alt) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    /* ================================================================
+       PAGE BREAKS
+       ================================================================ */
+    h1,
+    h2,
+    h3 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    h1 {
+        font-size: 28pt;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+    }
+
+    h2 {
+        font-size: 24pt;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    h3 {
+        font-size: 20pt;
+        margin-top: 0.8em;
+        margin-bottom: 0.4em;
+    }
+
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    p {
+        orphans: 3;
+        widows: 3;
+        page-break-inside: avoid;
+        margin-bottom: 1em;
+    }
+
+    /* ================================================================
+       LISTS
+       ================================================================ */
+    ul,
+    ol,
+    dl {
+        page-break-inside: avoid;
+        margin-bottom: 1em;
+    }
+
+    li {
+        page-break-inside: avoid;
+        margin-bottom: 0.5em;
+    }
+
+    dt {
+        font-weight: bold;
+        margin-top: 0.5em;
+    }
+
+    dd {
+        margin-left: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    /* ================================================================
+       TABLES
+       ================================================================ */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        page-break-inside: avoid;
+        margin-bottom: 1em;
+        border: 1px solid #000;
+    }
+
+    table thead {
+        display: table-header-group;
+    }
+
+    table tfoot {
+        display: table-footer-group;
+    }
+
+    tr {
+        page-break-inside: avoid;
+    }
+
+    th,
+    td {
+        border: 1px solid #000;
+        padding: 0.5em;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f0f0f0;
+        font-weight: bold;
+    }
+
+    /* ================================================================
+       BLOCKQUOTES
+       ================================================================ */
+    blockquote {
+        border-left: 3px solid #000;
+        padding-left: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        page-break-inside: avoid;
+    }
+
+    /* ================================================================
+       CODE
+       ================================================================ */
+    pre,
+    code {
+        background: #f5f5f5;
+        border: 1px solid #ccc;
+        padding: 0.25em;
+        page-break-inside: avoid;
+        font-family: 'Courier New', monospace;
+    }
+
+    pre {
+        padding: 0.5em;
+        margin: 1em 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    /* ================================================================
+       FORMS
+       ================================================================ */
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="tel"],
+    input[type="password"],
+    textarea,
+    select {
+        border: 1px solid #000;
+        padding: 0.25em;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        border: 1px solid #000;
+    }
+
+    /* ================================================================
+       SPACING
+       ================================================================ */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        margin-bottom: 2em;
+        page-break-after: avoid;
+    }
+
+    main {
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        page-break-inside: avoid;
+        margin-bottom: 1.5em;
+    }
+
+    article {
+        page-break-inside: avoid;
+    }
+
+    /* ================================================================
+       DRAGON-SPECIFIC PRINT STYLES
+       ================================================================ */
+    .dragon-icon {
+        display: none;
+    }
+
+    .dragon-title {
+        page-break-after: avoid;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    .dragon-header {
+        border-bottom: 2px solid #000;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+        page-break-after: avoid;
+    }
+
+    .dragon-content {
+        column-count: 1;
+    }
+
+    /* ================================================================
+       ALIGNMENT & POSITIONING FOR PRINT
+       ================================================================ */
+    .text-center {
+        text-align: center;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+    /* ================================================================
+       SPECIFIC ELEMENT HANDLING
+       ================================================================ */
+    header,
+    nav,
+    footer {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-content {
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    /* ================================================================
+       MEDIA QUERIES FOR PRINT (DPI)
+       ================================================================ */
+    @media print and (min-resolution: 300dpi) {
+        body {
+            font-size: 12pt;
+        }
+
+        h1 {
+            font-size: 32pt;
+        }
+
+        h2 {
+            font-size: 28pt;
+        }
+
+        h3 {
+            font-size: 24pt;
+        }
+    }
+
+    /* ================================================================
+       COLOR PRINTING
+       ================================================================ */
+    @media print and (color) {
+        h1,
+        h2,
+        h3 {
+            color: #000;
+        }
+
+        a {
+            color: #000;
+        }
+
+        .gold-text {
+            color: #8B7500;
+        }
+
+        .red-text {
+            color: #8B0000;
+        }
+
+        .print-accent {
+            background-color: #f0f0f0;
+            padding: 0.25em;
+        }
+    }
+
+    /* ================================================================
+       GRAYSCALE PRINTING
+       ================================================================ */
+    @media print and (monochrome) {
+        * {
+            color: black !important;
+            background: white !important;
+        }
+
+        img {
+            filter: grayscale(100%);
+        }
+
+        .colored-element {
+            border: 1px solid #000;
+        }
+    }
+
+    /* ================================================================
+       PAGE NUMBERING
+       ================================================================ */
+    .page-number {
+        display: block;
+    }
+
+    .page-number:before {
+        content: "Page " counter(page);
+    }
+
+    /* ================================================================
+       PRINT-SPECIFIC LAYOUT
+       ================================================================ */
+    .print-break {
+        page-break-after: always;
+    }
+
+    .print-break-before {
+        page-break-before: always;
+    }
+
+    .print-avoid-break {
+        page-break-inside: avoid;
+    }
+
+    .print-float-left {
+        float: left;
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+
+    .print-float-right {
+        float: right;
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+}
