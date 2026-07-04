@@ -1,0 +1,1 @@
+document.querySelector('button').onclick=()=>alert('Bem-vindo ao World Of Dragons!');
