@@ -1,0 +1,486 @@
+/* ================================================================
+   WORLD OF DRAGONS - PAGES STYLESHEET
+   Styles for guide, map, kingdoms, history, bestiary, magic, factions, gallery
+   ================================================================ */
+
+/* ================================================================
+   GUIDE PAGE
+   ================================================================ */
+.guide-section {
+    margin-bottom: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+    border-bottom: 1px solid var(--color-medium-gray);
+}
+
+.guide-section:last-child {
+    border-bottom: none;
+}
+
+.guide-section h2 {
+    color: var(--color-gold);
+    margin-bottom: var(--spacing-lg);
+}
+
+.guide-section p {
+    line-height: 1.8;
+}
+
+.placeholder {
+    background: rgba(212, 175, 55, 0.05);
+    border-left: 3px solid var(--color-gold);
+    padding: var(--spacing-lg);
+    border-radius: 4px;
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+
+/* ================================================================
+   MAP PAGE
+   ================================================================ */
+.map-container {
+    background: linear-gradient(135deg, var(--color-medium-gray), var(--color-dark-gray));
+    border: 2px solid var(--color-gold);
+    border-radius: 8px;
+    padding: var(--spacing-3xl);
+    margin-bottom: var(--spacing-3xl);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-placeholder {
+    text-align: center;
+}
+
+.placeholder-icon {
+    font-size: 5rem;
+    margin-bottom: var(--spacing-lg);
+    display: block;
+}
+
+.map-placeholder h2 {
+    color: var(--color-gold);
+    margin-bottom: var(--spacing-md);
+}
+
+.map-placeholder p {
+    margin-bottom: var(--spacing-md);
+}
+
+.map-placeholder .description {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.map-features {
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid var(--color-gold);
+    padding: var(--spacing-2xl);
+    border-radius: 8px;
+}
+
+.map-features h2 {
+    color: var(--color-gold);
+    margin-bottom: var(--spacing-2xl);
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.feature-item {
+    text-align: center;
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-medium-gray);
+    border-radius: 4px;
+    transition: all var(--transition-normal);
+}
+
+.feature-item:hover {
+    border-color: var(--color-red-wine);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+}
+
+.feature-item h3 {
+    color: var(--color-gold);
+    margin-bottom: var(--spacing-md);
+}
+
+/* ================================================================
+   KINGDOMS PAGE
+   ================================================================ */
+.kingdoms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.kingdom-card {
+    background: linear-gradient(135deg, var(--color-medium-gray) 0%, var(--color-light-gray) 100%);
+    border: 2px solid var(--color-gold);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.kingdom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2),
+                inset 0 0 20px rgba(139, 0, 0, 0.1);
+    border-color: var(--color-red-wine);
+}
+
+.card-header {
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.8), rgba(58, 58, 58, 0.8));
+    padding: var(--spacing-2xl);
+    text-align: center;
+    border-bottom: 1px solid var(--color-medium-gray);
+}
+
+.coat-of-arms {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background: rgba(212, 175, 55, 0.05);
+    border: 2px solid var(--color-gold);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.coat-of-arms img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: var(--spacing-lg);
+}
+
+.card-body h3 {
+    color: var(--color-gold);
+    margin-bottom: var(--spacing-md);
+}
+
+.card-body p {
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-sm);
+}
+
+.btn-secondary {
+    width: 100%;
+    text-align: center;
+}
+
+/* ================================================================
+   CATEGORIES GRID
+   ================================================================ */
+.categories-grid,
+.factions-grid,
+.magic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.category-card,
+.faction-card,
+.magic-card {
+    background: linear-gradient(135deg, var(--color-medium-gray) 0%, var(--color-light-gray) 100%);
+    border: 2px solid var(--color-gold);
+    padding: var(--spacing-2xl);
+    border-radius: 8px;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before,
+.faction-card::before,
+.magic-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 0, 0, 0.1), transparent);
+    transition: left var(--transition-slow);
+}
+
+.category-card:hover,
+.faction-card:hover,
+.magic-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-red-wine);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+}
+
+.category-card:hover::before,
+.faction-card:hover::before,
+.magic-card:hover::before {
+    left: 100%;
+}
+
+.category-card h2,
+.faction-card h2,
+.magic-card h2 {
+    color: var(--color-gold);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.category-card p,
+.faction-card p,
+.magic-card p {
+    color: var(--color-text-secondary);
+}
+
+/* ================================================================
+   TIMELINE
+   ================================================================ */
+.timeline {
+    position: relative;
+    padding: var(--spacing-3xl) 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, var(--color-gold), transparent);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: var(--spacing-3xl);
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: right;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    width: calc(50% - 50px);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    width: calc(50% - 50px);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--color-gold);
+    border: 3px solid var(--color-dark-gray);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 0 20px var(--color-gold);
+}
+
+.timeline-content {
+    background: linear-gradient(135deg, var(--color-medium-gray), var(--color-light-gray));
+    border: 1px solid var(--color-gold);
+    padding: var(--spacing-lg);
+    border-radius: 4px;
+}
+
+.timeline-content h3 {
+    color: var(--color-gold);
+}
+
+/* ================================================================
+   GALLERY
+   ================================================================ */
+.gallery-tabs {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-3xl);
+    border-bottom: 2px solid var(--color-medium-gray);
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    font-family: var(--font-title);
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all var(--transition-normal);
+    letter-spacing: 0.05em;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    color: var(--color-gold);
+    border-bottom-color: var(--color-gold);
+}
+
+.gallery-tab-content {
+    display: none;
+}
+
+.gallery-tab-content.active {
+    display: block;
+}
+
+.gallery-grid,
+.concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.gallery-item,
+.concept-item {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border: 2px solid var(--color-gold);
+    border-radius: 8px;
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.gallery-item:hover,
+.concept-item:hover {
+    border-color: var(--color-red-wine);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.gallery-item img,
+.concept-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.video-item {
+    aspect-ratio: 16/9;
+    border: 2px solid var(--color-gold);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.video-item:hover {
+    border-color: var(--color-red-wine);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-medium-gray), var(--color-light-gray));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+}
+
+/* ================================================================
+   RESPONSIVE DESIGN - PAGES
+   ================================================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+        text-align: left !important;
+    }
+    
+    .timeline-marker {
+        left: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .kingdoms-grid,
+    .categories-grid,
+    .factions-grid,
+    .magic-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid,
+    .concepts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .gallery-tabs {
+        justify-content: center;
+    }
+    
+    .tab-btn {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .kingdom-card,
+    .category-card,
+    .faction-card,
+    .magic-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid,
+    .concepts-grid,
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item,
+    .concept-item,
+    .video-item {
+        aspect-ratio: auto;
+        min-height: 200px;
+    }
+}
