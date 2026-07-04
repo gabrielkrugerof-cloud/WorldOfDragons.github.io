@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria - World Of Dragons">
+    <title>Galeria | World Of Dragons</title>
+    
+    <link rel="icon" type="image/png" href="../assets/icons/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+    <!-- Menu -->
+    <nav id="navbar" class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="../index.html">⚔ WORLD OF DRAGONS</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="guia.html">Guia</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+                <li><a href="reinos.html">Reinos</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="bestiario.html">Bestiário</a></li>
+                <li><a href="magia.html">Magia</a></li>
+                <li><a href="faccoes.html">Facções</a></li>
+                <li><a href="galeria.html" class="active">Galeria</a></li>
+                <li><a href="#" class="btn-enter">Entrar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content fade-in-up">
+            <h1>Galeria</h1>
+            <p>Capturas e conceitos do mundo</p>
+        </div>
+    </section>
+
+    <!-- Gallery Tabs -->
+    <main class="main-content">
+        <div class="content-container">
+            <div class="gallery-tabs">
+                <button class="tab-btn active" data-tab="screenshots">📸 Capturas</button>
+                <button class="tab-btn" data-tab="videos">🎬 Vídeos</button>
+                <button class="tab-btn" data-tab="concepts">🎨 Concept Arts</button>
+            </div>
+
+            <!-- Screenshots Tab -->
+            <div id="screenshots" class="gallery-tab-content active">
+                <div class="gallery-grid">
+                    <div class="gallery-item fade-in">
+                        <img src="../assets/images/placeholder.png" alt="Captura do jogo">
+                    </div>
+                    <div class="gallery-item fade-in" style="animation-delay: 0.1s">
+                        <img src="../assets/images/placeholder.png" alt="Captura do jogo">
+                    </div>
+                    <div class="gallery-item fade-in" style="animation-delay: 0.2s">
+                        <img src="../assets/images/placeholder.png" alt="Captura do jogo">
+                    </div>
+                    <div class="gallery-item fade-in" style="animation-delay: 0.3s">
+                        <img src="../assets/images/placeholder.png" alt="Captura do jogo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Videos Tab -->
+            <div id="videos" class="gallery-tab-content">
+                <div class="videos-grid">
+                    <div class="video-item fade-in">
+                        <div class="video-placeholder">
+                            <p>Vídeo em breve</p>
+                        </div>
+                    </div>
+                    <div class="video-item fade-in" style="animation-delay: 0.1s">
+                        <div class="video-placeholder">
+                            <p>Vídeo em breve</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Concepts Tab -->
+            <div id="concepts" class="gallery-tab-content">
+                <div class="concepts-grid">
+                    <div class="concept-item fade-in">
+                        <img src="../assets/images/placeholder.png" alt="Concept Art">
+                    </div>
+                    <div class="concept-item fade-in" style="animation-delay: 0.1s">
+                        <img src="../assets/images/placeholder.png" alt="Concept Art">
+                    </div>
+                    <div class="concept-item fade-in" style="animation-delay: 0.2s">
+                        <img src="../assets/images/placeholder.png" alt="Concept Art">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>⚔ WORLD OF DRAGONS</h3>
+                    <p>Minecraft Bedrock Edition</p>
+                    <p class="year">© <span id="year"></span> World Of Dragons</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidade</h4>
+                    <a href="#" target="_blank">Discord</a>
+                    <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">Criado com ⚔️ para os aventureiros do World Of Dragons</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

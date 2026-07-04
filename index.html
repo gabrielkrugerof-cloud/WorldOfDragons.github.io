@@ -1,1 +1,154 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>World Of Dragons</title><link rel="stylesheet" href="style.css"></head><body><header><h1>WORLD OF DRAGONS</h1><nav><a>Início</a><a>Mapa</a><a>História</a><a>Wiki</a></nav></header><main><div class="card"><h2>Bem-vindo</h2><p>Protótipo visual da futura Wiki.</p><button>Entrar no Mundo</button></div></main><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="World Of Dragons - Um universo medieval épico em Minecraft Bedrock Edition">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>World Of Dragons - Servidor Minecraft Bedrock</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Menu -->
+    <nav id="navbar" class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html">⚔ WORLD OF DRAGONS</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="pages/guia.html">Guia</a></li>
+                <li><a href="pages/mapa.html">Mapa</a></li>
+                <li><a href="pages/reinos.html">Reinos</a></li>
+                <li><a href="pages/historia.html">História</a></li>
+                <li><a href="pages/bestiario.html">Bestiário</a></li>
+                <li><a href="pages/magia.html">Magia</a></li>
+                <li><a href="pages/faccoes.html">Facções</a></li>
+                <li><a href="pages/galeria.html">Galeria</a></li>
+                <li><a href="#" class="btn-enter">Entrar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/videos/trailer.mp4" type="video/mp4">
+            <div class="hero-fallback"></div>
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-logo fade-in-up">
+                <img src="assets/images/logo.png" alt="World Of Dragons Logo">
+            </div>
+            <h1 class="hero-title fade-in-up" style="animation-delay: 0.2s">WORLD OF DRAGONS</h1>
+            <p class="hero-subtitle fade-in-up" style="animation-delay: 0.4s">Um universo medieval épico te aguarda</p>
+            <a href="pages/guia.html" class="btn-primary fade-in-up" style="animation-delay: 0.6s">Entrar na Enciclopédia</a>
+        </div>
+    </section>
+
+    <!-- Navigation Cards -->
+    <section class="navigation-cards">
+        <div class="cards-container">
+            <a href="pages/guia.html" class="card-link">
+                <div class="nav-card fade-in">
+                    <div class="card-icon">📖</div>
+                    <h3>Guia do Iniciante</h3>
+                    <p>Aprenda os fundamentos do World Of Dragons</p>
+                </div>
+            </a>
+            <a href="pages/mapa.html" class="card-link">
+                <div class="nav-card fade-in">
+                    <div class="card-icon">🗺️</div>
+                    <h3>Mapa</h3>
+                    <p>Explore os reinos e suas regiões</p>
+                </div>
+            </a>
+            <a href="pages/reinos.html" class="card-link">
+                <div class="nav-card fade-in">
+                    <div class="card-icon">👑</div>
+                    <h3>Reinos</h3>
+                    <p>Descubra os poderes feudais</p>
+                </div>
+            </a>
+            <a href="pages/historia.html" class="card-link">
+                <div class="nav-card fade-in">
+                    <div class="card-icon">📜</div>
+                    <h3>História</h3>
+                    <p>Conheça o passado épico deste mundo</p>
+                </div>
+            </a>
+            <a href="pages/bestiario.html" class="card-link">
+                <div class="nav-card fade-in">
+                    <div class="card-icon">🐉</div>
+                    <h3>Bestiário</h3>
+                    <p>Catálogo de criaturas e monstros</p>
+                </div>
+            </a>
+            <a href="pages/magia.html" class="card-link">
+                <div class="nav-card fade-in">
+                    <div class="card-icon">✨</div>
+                    <h3>Magia</h3>
+                    <p>Domínios arcanos e feitiços antigos</p>
+                </div>
+            </a>
+            <a href="pages/faccoes.html" class="card-link">
+                <div class="nav-card fade-in">
+                    <div class="card-icon">⚔️</div>
+                    <h3>Facções</h3>
+                    <p>Alianças, guildas e organizações</p>
+                </div>
+            </a>
+            <a href="pages/galeria.html" class="card-link">
+                <div class="nav-card fade-in">
+                    <div class="card-icon">🖼️</div>
+                    <h3>Galeria</h3>
+                    <p>Capturas e artes do reino</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>⚔ WORLD OF DRAGONS</h3>
+                    <p>Minecraft Bedrock Edition</p>
+                    <p class="year">© <span id="year"></span> World Of Dragons</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidade</h4>
+                    <a href="#" target="_blank">Discord</a>
+                    <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">Criado com ⚔️ para os aventureiros do World Of Dragons</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
